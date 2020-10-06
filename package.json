@@ -1,0 +1,25 @@
+{
+  "name": "explore-with-postman",
+  "version": "1.0.0",
+  "description": "Various materials for Exploratory API Testing with Postman workshops",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "injectPwd": "newman run postman_json/InjectPassword.postman_collection.json -d csv/passwords.csv",
+    "naughtyString": "newman run postman_json/NaughtyStrings.postman_collection.json -d csv/naughty_strings.csv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ambertests/explore-with-postman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ambertests/explore-with-postman/issues"
+  },
+  "homepage": "https://github.com/ambertests/explore-with-postman#readme",
+  "dependencies": {
+    "newman": "^5.2.0"
+  }
+}
