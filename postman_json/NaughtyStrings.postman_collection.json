@@ -19,7 +19,7 @@
 							"",
 							"// Because the strings are naughty, it is ",
 							"// better to log the encoded string value",
-							"pm.test(\"Status code is 200 with firstName: \" + encodedParam, function () {",
+							"pm.test(\"Status code is 200 with firstName: \" + encodedParam + \" - \" + expectedFN, function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
