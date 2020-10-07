@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "injectPwd": "newman run postman_json/InjectPassword.postman_collection.json -d csv/passwords.csv --delay-request 2000",
-    "naughtyString": "newman run postman_json/NaughtyStrings.postman_collection.json -d csv/naughty_strings.csv -e postman_json/Production.postman_env.json --delay-request 2000"
+    "naughtyString": "newman run postman_json/NaughtyStrings.postman_collection.json -d csv/naughty_strings.csv -e postman_json/Production.postman_env.json --delay-request 2000",
+    "loop": "newman run postman_json/Loop.postman_collection.json -r htmlExtra  --reporter-html-export report.html",
+    "booker": "newman run postman_json/Restful-Booker.postman_collection.json -e postman_json/Production.postman_env.json  -r htmlExtra"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/ambertests/explore-with-postman#readme",
   "dependencies": {
     "atob": "^2.1.2",
-    "newman": "^5.2.0"
+    "newman": "^5.2.0",
+    "newman-reporter-htmlextra": "^1.19.2"
   }
 }
